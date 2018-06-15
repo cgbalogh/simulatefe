@@ -1,0 +1,95 @@
+{
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    67,
+                    60
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "User",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": false,
+                    "addStarttimeEndtimeFields": false,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "\\TYPO3\\CMS\\Extbase\\Domain\\Model\\FrontendUser",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "1086986589193"
+                },
+                "propertyGroup": {
+                    "properties": []
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        }
+    ],
+    "properties": {
+        "backendModules": [],
+        "description": "Based on SimulateFE by Kai Strobach, elevated to Typo3 8.x.x",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 8.6.0-8.6.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "en",
+            "state": "beta",
+            "targetVersion": "8.6.0-8.6.99",
+            "version": "8.6.0"
+        },
+        "extensionKey": "simulatefe",
+        "name": "Simulate FE User",
+        "originalExtensionKey": "",
+        "originalVendorName": "",
+        "persons": [
+            {
+                "company": "",
+                "email": "typo3@kay-strobach.de",
+                "name": "Kai Strobach",
+                "role": "Developer"
+            },
+            {
+                "company": "",
+                "email": "cb@lustige-informatik.at",
+                "name": "Christoph Balogh",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "User=>list, simulate",
+                    "noncacheableActions": "User=>list, simulate",
+                    "switchableActions": "List\nUser->list;"
+                },
+                "key": "simulate",
+                "name": "FE-User Selector"
+            }
+        ],
+        "vendorName": "CGB"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2017-04-16 10:22",
+        "extension_builder_version": "8.6.0",
+        "be_user": " (1)"
+    }
+}

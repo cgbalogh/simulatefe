@@ -1,0 +1,60 @@
+{namespace s=Tx_Simulatefe_ViewHelper}
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+
+  <f:if condition="{allUsersMaySwitchUser}">
+	<f:then>
+      <f:flashMessages />
+
+      <div id="tx_simulatefeWrapper">
+        
+        <div>
+          <f:image 
+            id="tx_simulatefe_show"
+            src="EXT:core/Resources/Public/Icons/T3Icons/actions/actions-menu.svg" 
+            alt="<f:translate key='tx_simulatefe_show' />"
+          />
+
+          <f:image 
+            id="tx_simulatefe_hide"
+            src="EXT:core/Resources/Public/Icons/T3Icons/actions/actions-close.svg" 
+            alt="<f:translate key='tx_simulatefe_hide' />"
+          />
+
+          <f:if condition="{currentUser.uid}">
+            <f:link.action action="logout" title="" nocache="1">
+              <f:image 
+                id="tx_simulatefe_logout"
+                src="EXT:core/Resources/Public/Icons/T3Icons/actions/actions-logout.svg" 
+                alt="<f:translate key='tx_simulatefe_hide' />"
+              />
+            </f:link.action>
+            {currentUser.username} [{currentUser.uid}]
+          </f:if>
+          
+        </div>
+        <div id="tx_simulatefe" class="iScroll tx_simulatefeWrapperCollapse" >
+          <ul>
+            <f:for each="{users}" as="user">
+              <li><f:link.action action="switch" arguments="{user : user}">{user.username}</f:link.action></li>
+            </f:for>
+          </ul>
+        </div>
+      </div>
+	</f:then>
+  </f:if>
+
+</f:section>

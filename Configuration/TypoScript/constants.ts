@@ -1,0 +1,33 @@
+
+plugin.tx_simulatefe_simulate {
+    view {
+        # cat=plugin.tx_simulatefe_simulate/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:simulatefe/Resources/Private/Templates/
+        # cat=plugin.tx_simulatefe_simulate/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:simulatefe/Resources/Private/Partials/
+        # cat=plugin.tx_simulatefe_simulate/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:simulatefe/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_simulatefe_simulate//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
+
+## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
+
+plugin.tx_simulatefe_simulate {
+	persistence {
+		# cat=plugin.tx_simulatefe_simulate//a; type=int+; label=Default storage PID
+		storagePid = 1
+		# cat=plugin.tx_simulatefe_simulate//a; type=int+; label=Recursionlevel for storagePid
+        recursive = 250
+	}
+
+	settings {
+		# cat=plugin.tx_simulatefe_simulate//a; type=options[admin only=admin,group based=group]; label=How to decide, that user is able to change user
+		securityConcept = admin
+		# cat=plugin.tx_simulatefe_simulate/a; type=string; label=List of groups
+		securityGroupList = 0
+	}
+}

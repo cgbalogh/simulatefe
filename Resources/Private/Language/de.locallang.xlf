@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-04-17T15:01:52Z" product-name="simulatefe">
+		<header/>
+		<body>
+			<trans-unit id="tx_simulatefe_domain_model_user">
+				<source>User</source>
+				<target>Benutzer</target>
+			</trans-unit>
+			<trans-unit id="selectuser">
+				<source>Select frontend user</source>
+				<target>Benutzer wählen</target>
+			</trans-unit>
+			<trans-unit id="logout">
+				<source>logout</source>
+				<target>abmelden</target>
+			</trans-unit>
+			<trans-unit id="collapse">
+				<source>Hide user list</source>
+				<target>Verstecke Nutzerliste</target>
+			</trans-unit>
+			<trans-unit id="uncollapse">
+				<source>Show user list</source>
+				<target>Zeige Nutzerliste</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
